@@ -1,0 +1,6 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Debug</title></head><body style="font-family:monospace;padding:20px"><h1>Debug PWA</h1><div id="log"></div><script>
+function log(m){document.getElementById('log').innerHTML+='<div>'+m+'</div>'; console.log(m);}
+log('URL: '+location.href); log('HTTPS: '+(location.protocol==='https:'));
+fetch('/manifest.json').then(r=>{log('Manifest: '+r.status); return r.json()}).then(m=>{log('Manifest OK'); m.icons.forEach(ic=>fetch(ic.src).then(r=>log('Icon '+ic.src+' '+r.status)))});
+if('serviceWorker' in navigator){log('SW soportado');} window.addEventListener('beforeinstallprompt', e=>log('✅ INSTALABLE!'));
+</script></body></html>

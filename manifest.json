@@ -1,0 +1,25 @@
+{
+  "name": "El Rincón del Perfume x Kitty Edition",
+  "short_name": "Kitty Perfume",
+  "description": "Perfumes que dejan huella, con toque Kitty. Originales e imitación.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFF5F8",
+  "theme_color": "#FF2E7A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
